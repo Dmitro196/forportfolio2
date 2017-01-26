@@ -1,0 +1,225 @@
+.block06
+	{
+		position:relative;
+		width:100%;
+		height:700px;
+		background-color:#eaeaea;
+	
+	
+		background-image:url(../images/image1.png);
+		background-repeat:no-repeat;
+		
+		
+		 background-position-x: 100px;
+		 background-position-y: calc(100% - 200px);
+	}
+	
+	.block06 .title
+
+{
+	color:#641faa;
+	font-size:47px;
+	text-align:center;
+	padding-top:18px;
+	overflow: hidden;
+	position:relative;
+ }
+.block06 .title:before,
+.block06 .title:after {
+   
+    content: "";
+     display: inline-block;
+    vertical-align: middle;
+   width: 100%;
+    height: 2px;
+   
+    background-color: #641faa;
+   
+    position: relative;
+}
+.block06 .title:before {
+	margin-left: -100%;
+   
+    left: -14px;
+}
+.block06 .title:after {
+    
+    margin-right: -100%;
+   
+    right: -14px;
+}
+.block06 .footer
+{
+	height:200px;
+	width:100%;
+	background-color:#333333;
+	bottom:0;
+	position:absolute;
+	
+	
+}
+.block06 .footer h4
+{
+	max-width:900px;
+	font-size:48px;
+	color:#fff;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight:100;
+	margin:0 auto;
+	text-align:center;
+	margin-top:20px;
+}
+
+.block06 .footer p
+{
+	max-width:900px;
+	font-size:18px;
+	color:#fff;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight:100;
+	margin:0 auto;
+	text-align:center;
+
+}
+.block06 .footer p span
+{font-size:24px;position:relative;line-height:50px;}
+
+
+ .review
+{
+	
+	max-width:600px;
+	min-width:400px;
+	margin-left:5%;
+	margin-right:5%;
+	margin-top:80px;
+height:300px;
+position:relative;
+float:right;
+
+
+
+}
+
+#reviewPhoto
+{
+	position:relative;
+	float:left;
+		width:250px;
+		height:250px;
+		 background-size:cover;
+		background-repeat:no-repeat;
+	
+	margin-right:20px;
+	
+}
+#reviewText
+{
+	position:relative;
+	float:left;
+		width:250px;
+		height:250px;
+
+		
+	
+	
+	
+}
+
+.review .forArrows
+{
+	width:50px;
+	position:relative;
+	float:left;
+	margin-top:50px;
+	margin-left:10px;
+	
+}
+
+
+
+
+#reviewArrowLeft
+{position:relative;
+	float:right;
+		width:50px;
+		height:50px;
+	margin-top:20px;
+		background-image:url(../images/grid-1170_03.png);
+		cursor:pointer;}
+#reviewArrowRight
+{position:relative;
+	float:left;
+		width:50px;
+		height:50px;
+		margin-top:20px;		
+		background-image:url(../images/grid-1170_06.png);cursor:pointer;}
+
+#username
+{font-size:24px;
+	color:#6e15b3;}		
+#userReview
+{	
+	max-height:380px;
+	width:100%;
+	font-size:14px;
+	color:#333;
+	margin-top:20px;
+
+}
+@media screen and (max-width:1200px)
+{
+	.review
+	{
+	margin-top:0;
+	margin-left:150px;}
+	
+	.block06
+	{background-position-x:0;}
+	.review .forArrows
+	{
+		
+	margin-top:0;
+width:120px;
+height:60px;	
+		}
+		.block06 .footer h4
+{
+margin-top:0;
+font-size:40px;}
+.block06 .footer p
+{
+margin-top:0;
+margin:0;
+margin-left:5px;
+margin-right:5px;
+line-height:16px;
+}
+}
+@media screen and (max-width:800px)
+{		
+		#reviewPhoto
+		{width:150px;
+		height:150px;
+		border:3px solid white;
+		}
+		#reviewText
+		{width:220px;
+		margin-right:0;
+		float:right;
+		}
+		#userReview
+		{color:black;
+			
+		text-shadow: 0px 0px 3px white;
+		font-size:20px;
+		margin:0;
+		padding:0;}
+		
+}
+@media screen and (max-width:600px)
+{
+	#userReview
+		{background-color:rgba(255,255,255,0.4);}
+	
+}

@@ -1,0 +1,630 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>1170</title>
+	<link rel="stylesheet" type="text/css" href="css/mainStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/block01.css">
+	<link rel="stylesheet" type="text/css" href="css/block02.css">
+	<link rel="stylesheet" type="text/css" href="css/block03.css">
+	<link rel="stylesheet" type="text/css" href="css/block04.css">
+	<link rel="stylesheet" type="text/css" href="css/block05.css">
+	<link rel="stylesheet" type="text/css" href="css/block06.css">
+	<link rel="stylesheet" type="text/css" href="css/block07.css">
+	<link rel="stylesheet" type="text/css" href="css/block08.css">
+	<link rel="stylesheet" type="text/css" href="css/block09.css">
+		   <link rel="stylesheet" type="text/css" href="css/block010.css">
+		   		   <link rel="stylesheet" type="text/css" href="css/resurses.css">
+ <link href="https://fonts.googleapis.com/css?family=Marck+Script|Pattaya" rel="stylesheet">
+ <style>
+ .cleaner
+ {
+ clear:both;
+ width:100%;
+ 
+ }
+ 
+
+
+ </style>
+ <script src="jquery-1.7.2.min.js"></script>
+</head>
+
+<body bgcolor="white">
+<style>
+#slider-wrap{ /* Оболочка слайдера и кнопок */
+
+	width:100%; 
+	height:auto;
+	}
+#slider{ 
+	
+	
+	width:100%;
+
+	height:auto;
+	position:relative;
+	
+	}
+.slide{ 
+	background-color:red;
+
+	width:100%;
+	height:auto;
+
+	position:relative;
+	}
+	
+	
+	
+	
+	
+	
+	.sli-links{ /* Кнопки смены слайдов */
+	margin-top:0px;
+	z-index:20;
+	text-align:center;
+	
+	position:relative;
+	bottom:0;
+	}
+.sli-links .control-slide{
+	margin:2px;
+	display:inline-block;
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(radioBg.png) center bottom no-repeat;
+	
+	
+	}
+.sli-links .control-slide:hover{
+	cursor:pointer;
+	background-position:center center;}
+.sli-links .control-slide.active{
+	background-position:center top;}
+
+	
+	
+	
+	
+	
+	
+	
+	
+</style>
+<script>
+
+(function ($) {
+var hwSlideSpeed = 0;
+var hwTimeOut = 3000;
+var hwNeedLinks = true;
+
+$(document).ready(function(e) {
+	$('.slide').css(
+		{"position" : "relative",
+		 "top":'0', "left": '0'}).hide().eq(0).show();
+	var slideNum = 0;
+	var slideTime;
+	slideCount = $("#slider .slide").size();
+	var animSlide = function(arrow){
+		clearTimeout(slideTime);
+		$('.slide').eq(slideNum).fadeOut(hwSlideSpeed);
+		if(arrow == "next"){
+			if(slideNum == (slideCount-1)){slideNum=0;}
+			else{slideNum++}
+			}
+		else if(arrow == "prew")
+		{
+			if(slideNum == 0){slideNum=slideCount-1;}
+			else{slideNum-=1}
+		}
+		else{
+			slideNum = arrow;
+			}
+		$('.slide').eq(slideNum).fadeIn(hwSlideSpeed, rotator);
+		$(".control-slide.active").removeClass("active");
+		$('.control-slide').eq(slideNum).addClass('active');
+		}
+if(hwNeedLinks){
+var $linkArrow = $('<a id="prewbutton" href="#"></a><a id="nextbutton" href="#"></a>')
+	.prependTo('#slider');		
+	$('#nextbutton').click(function(){
+		animSlide("next");
+		return false;
+		})
+	$('#prewbutton').click(function(){
+		animSlide("prew");
+		return false;
+		})
+}
+	var $adderSpan = '';
+	$('.slide').each(function(index) {
+			$adderSpan += '<span class = "control-slide">' + index + '</span>';
+		});
+	$('<div class ="sli-links">' + $adderSpan +'</div>').appendTo('#slider-wrap');
+	$(".control-slide:first").addClass("active");
+	$('.control-slide').click(function(){
+	var goToNum = parseFloat($(this).text());
+	animSlide(goToNum);
+	});
+	var pause = false;
+	var rotator = function(){
+			//if(!pause){slideTime = setTimeout(function(){animSlide('next')}, hwTimeOut);}
+			}
+	$('#slider-wrap').hover(	
+		function(){clearTimeout(slideTime); pause = true;},
+		function(){pause = false; rotator();
+		});
+	rotator();
+});
+})(jQuery);
+
+</script>
+	<div class="block01" >
+		<div class="bubles1"><!--для пузірей на фоне  -->
+		</div>
+		<div class="headerbottom">
+			<h3>Так просто быть красивой!</h3>
+			<p>Создай свой образ с шелковистыми и обемистыми ресничками</p>
+		</div>
+		<div class="light"><!-- єфект свечения света -->
+		</div>
+		
+		<div class="hair"><!-- див для рисунка волос -->
+		</div>
+		<div class="navigation">
+			<ul>
+				<li><a href="#">Преимущества</a></li>
+			<li><a href="#">Цены</a></li>
+			<li><a href="#">Галерея работ</a></li>
+			<li><a href="#">Отзывы</a></li>
+			<li><a href="#">Частые вопросы</a></li>
+			<li><a href="#">Контакты</a></li>
+			</ul>
+		
+		</div>
+		<h3>Покоряй одним лишь взглядом</h3>
+		<h2>Качественное наращивание ресниц от Проффесионального мастера</h2>
+		<div class="information"><!-- див с контактной информацией -->
+			<h3>Запишись уже на завтра</h3>
+			<p class="phone1">093 333 33 33</p>
+			<div class="forPhones">
+				<a href="#" class="phone1activeCall1"><p>Call</p></a>
+				<a href="#" class="phone1activeCall2"><p>Call</p></a>
+			</div>
+			
+			<p>Софиевская Борщаговка<br>ЖК "София", ул. Боголюбова4</p>
+			<div class="button" >Записаться Онлайн</div>
+		</div>
+	</div><!--End block01-->
+	<div class="block02" >
+		<h2 class="title">Что тебя ожидает?</h2>
+		<div class="contentblock1" id="icon1"><!-- контент-блок с изображением вверху -->
+			<h3>Качество</h3>
+			<p>Опыт мастера более 6 лет<br> Материалы премиум класса<br> Поресничное наращивание </p>
+		</div>
+		<div class="contentblock1" id="icon2">
+		<h3>Безопасность</h3>
+			<p>Высококачественный клей<br> Гипоалергенные реснички<br> Стерильные инструменты </p>
+		</div>
+		<div class="contentblock1" id="icon3">
+		<h3>Красота</h3>
+			<p>Удлинение и Увеличение объема<br> Идеально при любой погоде<br> Выразительный взгляд </p>
+		</div>
+		<div class="contentblock1" id="icon4">
+		<h3>Комфорт</h3>
+			<p>Индивидуальный подход<br> Проффесиональная консультация<br> Теплая и уютная атмосфера</p>
+		</div>
+		
+		<div class="contentblock2" ><!-- контентблок которій пошире, без рисунка -->
+		<h3>14 278</h3>
+		<p>Часов сна в подарок<br>получила прекрасная половина Киева<br> Какая экономия времени на утреннем макияже!</p>
+		</div><div class="contentblock2" >
+		<h3>4372</h3>
+		<p>Часов сна в подарок<br>получила прекрасная половина Киева<br> Какая экономия времени на утреннем макияже!</p>
+		</div><div class="contentblock2" >
+		<h3>94%</h3>
+		<p>Часов сна в подарок<br>получила прекрасная половина Киева<br> Какая экономия времени на утреннем макияже!</p>
+		</div>
+			
+		 
+	</div><!--End block02-->
+	<div class="block03" >
+		<div class="header"><!-- верх блока 3 -->
+			<div class="headertext">
+				<h3>	Мечты становяться реальностью</h3>
+				<p>Во время процедуры наращивания рисниц ты сможешь и отдохнуть, и помечтать, и поразмышлять о разных приятных мелочах...и даже поспать :)</p>
+			</div>
+		</div>
+		<div class="bubles2"><!-- для фона с пзырями, ди на случай если нужно будет добавить анимацию-->
+		</div>
+		
+		<h3 class="title2">В чем особенность нарощенных ресниц?</h3>
+		<div class="eyes">
+			<div class="eyeBefore"><div class="before"><p>ДО</p></div></div>
+			<div class="eyeAfter"><div class="after"><p>После</p></div></div>
+		
+		</div>
+			<div class="infoblock right">
+			<h3>длительный еффект</h3>
+			<p>Ut eu ipsum mattis, pellentesque diam ut Vestst mi sit amet metus. Phasellus vel ipsum quis nunc gravida luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed placerat accumsan enim. Aenean sodales massa nunc, a eleifend elit gravida ac. Vivamus egestas vestibulum malesuada. Nam blandit tellus ut erat faucibus euismod. Ut maximus libero eget leo ullamcorper suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum dapibus rhoncus auctor. Ut risus dui, euismod ac lacus sed, mattis consectetur odio.</p>
+			
+			</div>
+			
+			<div class="infoblock right">
+			<h3>длительный еффект</h3>
+			<p>Ut eu ipsum mattis, pellentesque diam ut Vestst mi sit amet metus. Phasellus vel ipsum quis nunc gravida luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed placerat accumsan enim. Aenean sodales massa nunc, a eleifend elit gravida ac. Vivamus egestas vestibulum malesuada. Nam blandit tellus ut erat faucibus euismod. Ut maximus libero eget leo ullamcorper suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum dapibus rhoncus auctor. Ut risus dui, euismod ac lacus sed, mattis consectetur odio.</p>
+			
+			</div>
+			
+			<div class="infoblock left">
+			<h3>длительный еффект</h3>
+			<p> Vestibulum eu lobortis neque. Nullam venenatis consequat sem, ac venenatis ante consequat eu. Suspendisse consectetur facilisis condimentum. Phasellus quis ipsum dignissim, porta lectus eu, ornare lorem. Donec cursus in odio vitae mattis. Quisque pellentesque molestie nibh at sagittis. Praesent aliquam metus sed lectus tempor, quis elementum libero tempus. Aenean tristique sem aliquam turpis pharetra, ac pretium leo ornare. Mauris nulla nisi, bibendum nec magna ut, semper egestas ligula. Morbi blandit ligula vel ligula sodales, ut suscipit erat mollis.
+
+			Nulla non condimentum mauris, in auctor nisi. Etiam porta ultrices est, ut dignissim ipsum pretium id. Proin at pellentesque erat. Praesent sit amet tellus quis est aliquam ultrices. Nullam et purus sapien. Fusce sit amet vehicula diam, sed fringilla nisl. In blandit sollicitudin metus, non auctor odio blandit nec. Aliquam eget aliquam ante, quis accumsan turpis. Cras volutpat, nibh et placerat porta, sem orci hendrerit dolor, et molestie neque erat quis dolor. Suspendisse ac odio mi. In sit amet dui ac dui rutrum commodo sit amet et lacus. Nullam metus libero, consequat at erat at, mollis facilisis quam. Aliquam blandit velit non ultrices suscipit. Integer porttitor, orci euismod pharetra pretium, arcu risus rhoncus ipsum, pellentesque faucibus est sem vitae leo.</p>
+			
+			</div>
+			<div class="infoblock right">
+			<h3>длительный еффект</h3>
+			<p>Ut eu ipsum mattis, pellentesque diam ut Vestst mi sit amet metus. Phasellus vel ipsum quis nunc gravida luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed placerat accumsan enim. Aenean sodales massa nunc, a eleifend elit gravida ac. Vivamus egestas vestibulum malesuada. Nam blandit tellus ut erat faucibus euismod. Ut maximus libero eget leo ullamcorper suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum dapibus rhoncus auctor. Ut risus dui, euismod ac lacus sed, mattis consectetur odio.</p>
+			
+			</div>
+			<div class="cleaner"><!-- прекращаем обтекание чтоб можно было выстроить высоту блока 3 -->
+			</div>
+				<div class="miniblockInfo" id="icon9">
+			
+					<p class="text">С другой стороны укрепление и   </p>
+				</div>
+				<div class="miniblockInfo" id="icon10">
+			
+					<p class="text">С другой стороны укрепление и   </p>
+				</div>
+				<div class="miniblockInfo" id="icon11">
+			
+					<p class="text">С другой стороны укрепление и   </p>
+				</div>
+				<div class="miniblockInfo" id="icon12">
+			
+					<p class="text">С другой стороны укрепление и   </p>
+				</div>
+				<div class="miniblockInfo" id="icon13">
+			
+					<p class="text">С другой стороны укрепление и   </p>
+				</div>
+			
+			<div class="cleaner">
+			</div>
+			
+			
+			<div class="footer"><!-- низ 3-го блока -->
+			<div class="footertext">
+				<h3>Невероятно выразительный взгляд</h3>
+				<p>уже через пару часов</p>
+			</div>
+		</div>
+	</div><!--End block03-->
+	<div class="block04" >
+		<h2 class="title">Простой выбор</h2>
+		<div class="demo">
+			<div class=" forResize "><!-- блок с рисунками что меняються -->
+				<div class="container">
+					<div class="left_panel eye1">  </div>
+					<div class="right_panel eye2">
+					<div class="drag1"></div> 
+					</div>
+				</div>
+			</div>
+			<div class="fronblock ">
+			</div>
+			<div class="centralblock ">
+				<h4> 3D объём<br> <span>550грн</span></h4>
+				<div class="button">Хочу так же!</div>
+			</div>
+			<p>Повседневная практика показывает, что рамки и место обучения кадров позволяет выполнять</p>
+		</div>
+		<div class="demo">
+				<div class=" forResize ">
+		
+			<div class="container">
+				<div class="left_panel eye3">  </div>
+				<div class="right_panel eye4">
+				<div class="drag1"></div> 
+				</div>
+			</div>
+			
+		</div>
+			<div class="fronblock ">
+				
+				
+			</div>
+			<div class="centralblock ">
+				<h4> 3D объём<br> <span>550грн</span></h4>
+				<div class="button">Хочу так же!</div>
+			</div>
+			<p>Повседневная практика показывает, что рамки и место обучения кадров позволяет выполнять</p>
+		</div>
+		<div class="demo">
+				<div class=" forResize ">
+		
+			<div class="container">
+				<div class="left_panel eye5">  </div>
+				<div class="right_panel eye6" >
+				<div class="drag1"></div> 
+				</div>
+			</div>
+			
+		</div>
+			<div class="fronblock ">
+				 
+				
+			</div>
+			<div class="centralblock ">
+				<h4> 3D объём<br> <span>550грн</span></h4>
+				<div class="button">Хочу так же!</div>
+			</div>
+			<p>Повседневная практика показывает, что рамки и место обучения кадров позволяет выполнять</p>
+		</div>
+		
+		<div class="demo">
+				<div class=" forResize ">
+		
+			<div class="container">
+				<div class="left_panel eye7">  </div>
+				<div class="right_panel eye8">
+				<div class="drag1"></div> 
+				</div>
+			</div>
+			
+			</div>
+			<div class="fronblock ">
+				
+				
+			</div>
+			<div class="centralblock ">
+				<h4> 3D объём<br> <span>550грн</span></h4>
+				<div class="button">Хочу так же!</div>
+			</div>
+			<p>Повседневная практика показывает, что рамки и место обучения кадров позволяет выполнять</p>
+		</div>	
+	</div><!--End block04-->
+	<div class="block05" >
+		<div class="bubles3"><!-- див а не фон на случай добавления анимации движения -->
+		</div>
+		<h3 class="title2">Мои Работы</h3>
+		<div class="Forslider">
+			<div id="slider-wrap">
+				<div id="slider">
+					<div class="slide">
+						<div class="myworks" id="eye5"><a href="#"><p>work1</p></a>
+						</div>
+						<div class="myworks" id="eye6"><a href="#"><p>work1</p></a>
+						</div>
+						<div class="myworks" id="eye7"><a href="#"><p>work1</p></a>
+						</div>
+						<div class="myworks" id="eye8"><a href="#"><p>work1</p></a>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="myworks" id="eye5"><a href="#"><p>work1</p></a>
+						</div>
+						<div class="myworks" id="eye6"><a href="#"><p>work1</p></a>
+						</div>
+						<div class="myworks" id="eye8"><a href="#"><p>work1</p></a>
+						</div>
+					</div>
+					<div class="cleaner"></div>
+				</div>
+			</div>
+		</div>
+	</div><!--End block05-->
+	<div class="block06" >
+		<h2 class="title">отзывы</h2>
+		<div class="review">
+			<div id="reviewPhoto"></div>
+			<div id="reviewText">
+				<p id="username"></p>
+				<p id="userReview"></p>
+			</div>
+			<div class="forArrows">
+				<div id="reviewArrowLeft" onclick="reviewNext()"></div>	
+				<div id="reviewArrowRight" onclick="reviewPrew()"></div>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<h4>Шикарные пушистые и густые ресницы</h4>
+			
+			<p><span>Мгновенное преображение<br></span>Получай в 2 раза больше комплиментов от мужчин после безопасного наращивания ресниц уже завтра! ты етого достойна!</p>
+		</div>
+	</div><!--End block06-->
+	<div class="block07" >
+		<div class="light">
+		</div>
+		<div class="block07title">
+			<h3>Записаться на прием<span><br>и получить в подарок</span></h3>
+			<p><br>щеточку для ухода за нарощенными ресничками</p>
+		</div>
+		<div class="contactForm">
+			<form class="forForm" >
+				<input type="text" placeholder="Ваше имя">
+				<input type="text" placeholder="Ваш номер">
+				<input type="text" placeholder="Удобное время(утро/день/вечер)">
+				 <input type="button" class="SendButton" value="Submit">
+			
+			</form>
+			<div class="decorationblock" >
+				<p>Таким образом новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующи</p>
+			</div>
+		</div>
+	</div><!--End block07-->
+	<div class="block08" >
+		<div class="bubles4">
+		</div>
+		
+		<h3 class="title2">Вопрос Ответ</h3>
+		<div class="FAQ">
+		<ul>
+			<li id="item1" onclick="ClickFAQ(this.id)"><p>Сколько ?</p></li>
+			<li id="item2" onclick="ClickFAQ(this.id)"><p>Сколько ?</p></li>
+			<li id="item3" onclick="ClickFAQ(this.id)"><p>Больно ли наращивать ресницы? Есть ли болезненные ощущения?</p></li>
+			<li id="item4" onclick="ClickFAQ(this.id)"><p>Сколько ?</p></li>
+			<li id="item5" onclick="ClickFAQ(this.id)"><p>Сколько ?</p></li>
+		</ul>
+		<div id="text"><div id="arrow"></div><p id ="FAQtext"></p></div>
+		</div>
+	</div><!--End block08-->
+	<div class="block09" >
+
+		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.1411000424046!2d30.523568851713723!3d50.451033085063706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce505416e421%3A0x20855497d679d777!2z0JzQsNC50LTQsNC9INCd0LXQt9Cw0LvQtdC20L3QvtGB0YLRliwg0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1485195384161" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<div class="info">
+			<p class="address">Софиевская Борщаговка <br>ЖК"София" <br>улю Боголюбова 4</p>
+			<p class="phonenumber">093 333 33 33</p>
+			<a href="#" class="activeCall1">Call</a>
+			<a href="#" class="activeCall2">Call</a>
+		</div>
+	</div><!--End block09-->
+	<div class="block010 " >
+		<a href="#"><p>Политика Конфиденциальности</p></a>
+		<div class="emblem">
+		</div>
+		<h4>2013-2016<br>Проффесиональное наращивание Ресниц</h4>
+		<p>orem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec mollis lectus. Maecenas tristique faucibus ipsum vitae ullamcorper. Aenean elit ipsum, rhoncus sed urna sit amet, placerat facilisis erat. Praesent gravida quis metus ac ultricies. Nam tellus odio, pulvinar sit amet urna vitae, laoreet sollicitudin nunc. Pellentesque non rutrum tellus. Fusce ante arcu, molestie et faucibus a, facilisis sed augue. Cras dolor felis, scelerisque ut nulla ut, mollis molestie metus. Vestibulum a ris</p>
+		<p>orem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec mollis lectus. Maecenas tristique faucibus ipsum vitae ullamcorper. Aenean elit ipsum, rhoncus sed urna sit amet, placerat facilisis erat. Praesent gravida quis metus ac ultricies. Nam tellus odio, pulvinar sit amet urna vitae, laoreet sollicitudin nunc. Pellentesque non rutrum tellus. Fusce ante arcu, molestie et faucibus a, facilisis sed augue. Cras dolor felis, scelerisque ut nulla ut, mollis molestie metus. Vestibulum a ris</p>
+		<p>orem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec mollis lectus. Maecenas tristique faucibus ipsum vitae ullamcorper. Aenean elit ipsum, rhoncus sed urna sit amet, placerat facilisis erat. Praesent gravida quis metus ac ultricies. Nam tellus odio, pulvinar sit amet urna vitae, laoreet sollicitudin nunc. Pellentesque non rutrum tellus. Fusce ante arcu, molestie et faucibus a, facilisis sed augue. Cras dolor felis, scelerisque ut nulla ut, mollis molestie metus. Vestibulum a ris</p>
+	</div><!--End block010-->
+
+	<script><!-- скрипт для блока с вопросами -->
+	var FAQarray=["sum, rhoncus sed urna sit amet, placerat facilisis erat. Praesent gravida quis metus ac ultricies. Nam tellus odio, pulvinar sit amet uUt eu ipsum mattis, pellentesque diam ut, posuere justo. Vestibulum sit amet urna sit amet tellus egestas tristique quis a elit. Aenean tempus mollis dolor, vitae condimentum lorem sodales vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas egestas, leo ut iaculis vehicula, ligula quam mattis odio, eu sagittis est mi sit amet metus. Phasellus vel ipsum quis nunc gravida luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed placerat accumsan enim. Aenean sodales massa nunc, a eleifend elit gravida ac. Vivamus egestas vestibulum malesuada. Nam blandit tellus ut erat faucibus euismod. Ut maximus libero eget leo ullamcorper suscipit. Cum sociis natoque penatibus et magnis dis parturient sum, rhoncus sed urna sit amet, placerat facilisis erat. Praesent gravida quis metus ac ultricies. Nam tellus odio, pulvinar sit amet uUt eu ipsum mattis, pellentesque diam ut, posuere justo. Vestibulum sit amet urna sit amet tellus egestas tristique quis a elit. Aenean tempus mollis dolor, vitae condimentum lorem sodales vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas egestas, leo ut iaculis vehicula, ligula quam mattis odio, eu sagittis est mi sit amet metus. Phasellus vel ipsum quis nunc gravida luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed placerat accumsan enim. Aenean sodales massa nunc, a eleifend elit gravida ac. Vivamus egestas vestibulum malesuada. Nam blandit tellus ut erat faucibus euismod. Ut maximus libero eget leo ullamcorper suscipit. Cum sociis natoque penatibus et magnis dis parturientmontes, nascetur ridiculus mus. Vestibulum dapibus rhoncus auctor. Ut risus dui, euismod ac lacus sed, mattis consectetur odio.rna vitae, laoreet sollicitudin nunc. Pellentesque non rut","by","text3","alternative text","text5"];
+	 document.getElementById("FAQtext").innerHTML = FAQarray[0];
+	
+	 
+	 
+	 var FAQquestionHight=document.getElementById("item1").offsetHeight;
+	arrow.style.marginTop = (0*FAQquestionHight)+"px";
+	
+	function ClickFAQ(id){//в зависимости от того какой елемент вызвал событие, выводим текст из масива и меняем положение белой стрелки
+var arrow=document.getElementById("arrow");
+FAQquestionHight=document.getElementById("item1").offsetHeight;
+
+	switch (id) {
+  case "item1":
+    document.getElementById("FAQtext").innerHTML = FAQarray[0];
+	arrow.style.marginTop = (0*FAQquestionHight)+"px";
+    break;
+  case "item2":
+     document.getElementById("FAQtext").innerHTML = FAQarray[1];
+		arrow.style.marginTop = (1*FAQquestionHight)+"px";
+    break;
+  case "item3":
+    document.getElementById("FAQtext").innerHTML = FAQarray[2];
+		arrow.style.marginTop = (2*FAQquestionHight)+"px";
+    break;
+	case "item4":
+    document.getElementById("FAQtext").innerHTML = FAQarray[3];
+		arrow.style.marginTop = (3*FAQquestionHight)+"px";
+    break;
+	case "item5":
+    document.getElementById("FAQtext").innerHTML = FAQarray[4];
+		arrow.style.marginTop = (4*FAQquestionHight)+"px";
+    break;
+  
+}
+
+	
+
+	
+	
+	}
+	</script>
+	
+	
+	
+	<script><!-- скрипт для смены изображения 1 на другое в 4-м блоке -->
+ var isResizing = false,
+        lastDownX = 0,
+        parentContainer;
+ 
+    $(function () {
+        var container = $('.container'),
+            handle = $('.drag1');
+ 
+        handle.on('mousedown', function (e) {
+		
+            isResizing = true;
+            lastDownX = e.clientX;
+            parentContainer = $(this).parents('.container');
+			
+        });
+ 
+        $(document).on('mousemove', function (e) {
+            // we don't want to do anything if we aren't resizing.
+            if (!isResizing)
+                return;
+ 
+            //var offsetRight = container.width() - (e.clientX - container.offset().left);
+			var offsetRight = parentContainer.width() - (e.clientX - parentContainer.offset().left);
+
+            console.log("parentcontainer:"+parentContainer);
+            parentContainer.children('.left_panel').css('right', offsetRight);
+            parentContainer.children('.right_panel').css('width', offsetRight);
+        }).on('mouseup', function (e) {
+            // stop resizing
+            isResizing = false;
+        });
+    });
+</script>
+<script><!-- скрипт для работы блока с отзывами  -->
+var review=["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec mollis lectus. Maecenas tristique faucibus ipsum vitae ullamcorper. Aenean elit ipsum, rhoncus sed urna sit amet, placerat facilisis erat. Praesent gravida quis metus ac ultricies. Nam tellus odio, pulvinar sit amet urna vitae, laoreet solli",
+			"culis vehicula, ligula quam mattis odio, eu sagittis est mi sit amet metus. Phasellus vel ipsum quis nunc gravida luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed placerat accumsan enim. Aenean sodales massa nunc, a eleifend elit gravida ac. Vi",
+			"nice work"],
+	userNames=["Диана Рыбакова","Катя Сунцова","Мария злюка"],
+	photos=['url(images/image2.png)',
+			'url(images/image1.png)',
+			'url(images/image3.png)'],
+		count=0;
+
+	
+		
+var textfield=document.getElementById("userReview");	
+var namefield=document.getElementById("username");
+var photofield=	document.getElementById('reviewPhoto')
+textfield.innerHTML=review[count];		
+namefield.innerHTML=	userNames[count];
+photofield.style.backgroundImage=photos[count];		
+
+function reviewPrew()
+{
+if(count>0)
+{
+count--;
+
+textfield.innerHTML=review[count];		
+namefield.innerHTML=	userNames[count];	
+photofield.style.backgroundImage=photos[count];	
+
+}
+
+
+}
+function reviewNext()
+{
+if(count<review.length-1)
+{
+count++;
+textfield.innerHTML=review[count];		
+namefield.innerHTML=	userNames[count];	
+photofield.style.backgroundImage=photos[count];	
+}
+
+
+}
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+.block04
+	{
+		position:relative;
+		width:100%;
+		min-height:810px;
+		height:auto;
+		background-color:white;
+		overflow:hidden;
+		
+		
+	}
+	.block04 .title
+
+{
+	color:#641faa;
+	font-size:47px;
+	text-align:center;
+	margin-top:40px;
+	overflow: hidden;
+	position:relative;
+	margin-left:10%;
+	margin-right:10%;
+ }
+.block04 .title:before,
+ .block04 .title:after {
+   
+    content: "";
+     display: inline-block;
+    vertical-align: middle;
+   width: 50%;
+    height: 4px;
+   
+    background-color: #641faa;
+   
+    position: relative;
+}
+.block04 .title:before {
+	margin-left: -100%;
+   
+    left: -14px;
+}
+.block04 .title:after {
+    
+    margin-right: -100%;
+   
+    right: -14px;
+}
+
+.demo
+{
+	position:relative;
+	
+	float:left;
+	margin-left:5%;
+	width:260px;
+	height:600px;
+	
+	overflow:hidden;
+	margin-bottom:30px;
+	margin-top:20px;
+}
+
+   body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.forResize
+{
+width:260px;
+height:240px;
+
+position:absolute;
+overflow:hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+position:absolute;
+}
+ .left_panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 100px;
+    background: grey;
+	
+	background-size:cover;
+	max-width:100%;
+	min-width:0;
+}
+
+.right_panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+	max-width:100%;
+	min-width:0;
+    color:#fff;
+    background: black;
+
+	background-size:cover;
+	background-position:right;
+	border-left:3px solid white;
+}
+ .drag1 {
+    position: absolute;
+    left: -4px;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    cursor: w-resize;
+}
+
+.demo p
+{
+	position:absolute;
+	width:100%;
+	height:120px;
+	text-align:center;
+	color:#333333;
+	font-size:16px;
+	bottom:0;
+	
+}
+
+
+.fronblock
+{
+	
+	position:relative;
+	width:150px;
+	height:150px;
+	top:250px;
+	background-color:#641faa;
+	
+	transform: matrix(2, 1, -2, 1, 0, 0);
+	margin:0 auto;
+	border-radius:40% 0 0 0;
+}
+.centralblock 
+{
+	position:absolute;
+	width:100%;
+	height:160px;
+
+	top:250px;
+	
+}
+.centralblock h4
+{
+	
+	font-size:24px;
+	color:#fff;
+	text-align:center;
+	font-weight:100;
+	margin-top:10px;
+}
+.centralblock h4 span
+{
+	position:relative;
+	font-size:30px;
+	color:#fff;
+	text-align:center;
+	margin-top:100px;
+	font-weight:900;
+	line-height:70px;
+}
+.centralblock .button
+{
+	position:relative;
+	width:200px;
+	height:50px;
+	text-align:center;
+	color:#fff;
+	font-size:22px;
+	margin:0 auto;
+	margin-top:25px;
+	line-height:50px;
+}
+
+.centralblock .button:hover
+{cursor:pointer;}
+
+
+
+
+
+
+
+

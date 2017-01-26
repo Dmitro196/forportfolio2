@@ -1,0 +1,332 @@
+/*BLOCK1*/
+	.block01
+	{
+		position:relative;
+		width:100%;
+		height:809px;
+		background-image:url(../images/background01.png);
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-position: bottom;
+		overflow:hidden;
+	
+	}
+	.bubles1
+	{
+		position:absolute;
+		width:100%;
+		height:100%;
+		background-image: url(../images/bubles.png);
+		background-repeat: repeat;
+		animation: example 300s infinite;/*анимация движения*/
+		overflow:hidden;
+	}
+
+	
+	@keyframes example 
+	{
+		0%   {background-position:0px;}
+		50%  {background-position:5000px;}
+		100% {background-position:10000pxpx;}
+	}
+
+	
+	
+	.headerbottom
+	{
+		background-color:#1c1f25;
+		position:absolute;
+		bottom:0;
+		width:100%;
+		height:141px;
+		background-image:url(../images/woomanBG1.png);
+		background-repeat:no-repeat;
+		background-position:right 3em bottom 0;
+		z-index:200;
+	}
+	.block01 .headerbottom h3
+	{	position:absolute;
+		color: white;
+		font-size:48px;
+		line-height:0;
+		left:10%;
+		font-family: 'Pattaya', sans-serif;
+		font-weight:100;
+		top:40px;
+	}
+	 .block01 .headerbottom p
+	{
+		position:absolute;
+		color: white;
+		font-size:26px;
+		left:10%;
+		top:75px;
+	}
+	
+	
+	.hair
+	{
+		width:643px;
+		height:668px;
+		position:absolute;
+		background-image:url(../images/hair.png);
+		background-position: -100px 0px;
+	}
+	
+	.block01 .light
+	{
+		width:0px;
+		height:0px;
+		background-color:white;
+		position:absolute;
+		left:495px;
+		top:310px;
+		box-shadow: 0 0 250px 150px rgba(255,255,255,0.7);
+		border-radius:50%;
+	}
+	.navigation
+	{
+		
+		width:auto;
+		height:auto;
+		position:absolute;
+		top:0;
+		right:0;
+		margin-top:20px;
+	}
+	
+	.navigation ul
+	{
+		list-style:none;
+	}
+	.navigation ul li
+	{
+		float:left;
+		margin-right:30px;
+		margin-left:30px;
+	}
+	.navigation ul li a
+	{
+		text-decoration:none;	
+		font-size:18px; 
+		color:white;
+		transition:all 2s;
+	}
+	.navigation ul li a:hover
+	{
+		color:red;
+		
+	}
+	
+	
+	.information
+	{
+		
+		height:235px;
+		width:330px;
+		position:absolute;
+		right:180px;
+		top:330px;
+		background-color:white;
+		border:15px solid #641faa;
+		border-top:45px solid #641faa;
+		border-radius:5px;
+	}
+	
+	
+	
+	.block01 .information h3
+	{
+		color:white;
+		position:relative;
+		margin:0 auto;
+		text-align:center;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		font-size:22px;
+		top:-35px;
+		padding:0;
+		
+	}
+	
+	.block01 .information .phone1
+	{
+		
+		color:#641faa;
+		margin:0 auto;
+		width:170px;
+		text-align:center;
+		background-image:url(../images/phone1.png);
+		background-repeat:no-repeat;
+		background-position:0 8px;
+		font-size:22px;
+	}
+	
+	.block01 h3
+	{	
+		position:absolute;
+		color: white;
+		font-size:48px;
+	
+		right:5%;
+		font-family: 'Pattaya', sans-serif;
+		font-weight:100;
+		top:90px;
+	}
+	.block01 h2
+	{
+		position:absolute;
+		width:580px;
+		height:auto;
+		color: white;
+		font-size:26px;
+		text-align:center;
+		right:5%;
+		top:190px;
+	}
+	
+	
+	
+	
+	.button
+	{
+		position:relative;
+		margin:0 auto;
+		padding:0;
+		bottom:20px;
+		width:240px;
+		height:55px;
+		color:white;
+		font-size:22px;
+		background-color:#1cb100;
+		text-align:center;
+		line-height:50px;
+		margin-top:30px;
+		transition:all 1s;
+	}
+	.button:hover
+	{color:red;
+	cursor:pointer;
+	}
+	
+	.forPhones
+	{
+		
+		width:80px;
+		height:40px;
+
+		position:relative;
+		margin:0 auto;
+		margin-top:10px;
+		
+	}
+	.phone1activeCall1
+	{
+		position:absolute;
+		width:35px;
+		height:35px;
+		background-color:red;
+		background-image:url(../images/mini-icon3.png);
+		left:0px;
+		font-size:22px;
+		color:white;
+		
+		text-indent:-1000000px;
+		
+	}
+	
+	.phone1activeCall2
+	{
+		position:absolute;
+		width:35px;
+		height:35px;
+		background-color:red;
+		background-image:url(../images/mini-icon4.png);
+		right:0px;
+		font-size:22px;
+		color:white;
+		
+		text-indent:-1000000px;
+		
+	}
+	.block01 .information p
+	
+	{
+		color:red;
+		font-size:18px;
+		color:#641faa;
+		position:relative;
+		text-align:center;
+		margin-top:10px;
+	}
+	
+	
+	@media screen and (max-width:1000px)
+	{	
+		.block02
+		{
+			background-color:red;
+			
+		}
+		.block01 .headerbottom h3
+		{
+			
+			left:10px;
+		}
+		.block01 .headerbottom p
+		{
+			
+			left:10px;
+		}
+	}
+	@media screen and (max-width:800px)
+	{.block02
+		{
+			background-color:blue;
+			
+		}
+		.information
+		{
+			position:relative;
+			margin:0 auto;
+			right:0;
+		}
+		
+		
+		 
+		.block01 .headerbottom h3
+		{
+			
+			  text-shadow: 1px 1px 2px black, 0 0 1em black;
+		}
+		.block01 .headerbottom p
+		{
+			
+			  text-shadow: 1px 1px 2px black, 0 0 1em black;
+		}
+		
+	
+		.block01 h3
+	{font-size:40px;	
+	margin:0 auto;
+	text-align:center;
+	}
+		.block01 h2
+	{	
+	
+	width:auto;
+	}
+	
+	}
+	@media screen and (max-width:600px)
+	{	.block02
+		{
+			background-color:green;
+			
+			
+		}
+		.block01 .headerbottom h3
+		{font-size:30px;}
+	
+		
+	}
+		
